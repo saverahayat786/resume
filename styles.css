@@ -19,7 +19,7 @@
     display: inline-block;
     margin-top: 20px;
     font-size: 24px;
-    color: darkblue;
+    color: pink;
 }
 
 /* Float */
@@ -57,7 +57,7 @@ ul li::before {
 
 @media (min-width: 769px) {
     body {
-        background-color: white;
+        background-color: pink;
     }
 }
 
@@ -67,7 +67,7 @@ ul li::before {
     justify-content: center;
     align-items: center;
     padding: 20px;
-    background-color: beige;
+    background-color: pink;
 }
 
 /* Grid */
