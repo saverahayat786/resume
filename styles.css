@@ -1,7 +1,15 @@
 /* Combining CSS Selectors */
+body, .content, .footer, .header {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f3e4; /* Soft background color for a cute look */
+}
+
 .content, .footer, .header {
     margin: 20px;
     text-align: center;
+    padding: 10px;
 }
 
 /* CSS Positioning */
@@ -12,36 +20,62 @@
     width: 150px; /* Adjusted width */
     height: auto; /* Maintain aspect ratio */
     border-radius: 50%;
+    border: 3px solid #ffe4e1; /* Soft border */
 }
 
 /* CSS Display */
 .name {
-    display: inline-block;
+    display: block;
     margin-top: 20px;
-    font-size: 24px;
-    color: pink;
+    font-size: 32px; /* Larger font for name */
+    font-weight: bold;
+    color: #4169e1; /* Royal Blue */
 }
 
-/* Float */
-h3.head {
-    float: left;
-    color: teal;
-    margin: 0;
+/* Section Headings */
+.head {
+    float: none; /* Removed float */
+    text-align: left;
+    color: #006400; /* Dark Green */
+    font-size: 24px; /* Increase font size */
+    margin-top: 30px; /* Separate sections */
+    border-bottom: 2px solid #d3d3d3; /* Underline */
+    padding-bottom: 5px;
+    display: block;
 }
 
 /* List Style */
 ul {
     list-style-type: none; /* Remove bullet points */
     padding: 0;
+    margin: 15px 0; /* Space above and below lists */
 }
 
 ul li::before {
     content: "\2022"; /* Add a custom bullet point */
-    color: teal;
+    color: #ff69b4; /* Light pink bullet */
     font-weight: bold;
-    display: inline-block; 
+    display: inline-block;
     width: 1em;
     margin-left: -1em;
+}
+
+/* Paragraph styling */
+p, a {
+    font-size: 18px;
+    line-height: 1.6; /* Increase line spacing */
+    margin-bottom: 10px;
+    color: #333; /* Standard text color */
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+a:hover {
+    color: #ff69b4; /* Light pink on hover */
 }
 
 /* Media Queries */
@@ -57,7 +91,7 @@ ul li::before {
 
 @media (min-width: 769px) {
     body {
-        background-color: pink;
+        background-color: white;
     }
 }
 
@@ -67,7 +101,8 @@ ul li::before {
     justify-content: center;
     align-items: center;
     padding: 20px;
-    background-color: pink;
+    background-color: #ffe4e1; /* Light pink background */
+    border-radius: 15px;
 }
 
 /* Grid */
@@ -77,18 +112,27 @@ ul li::before {
     grid-gap: 20px;
 }
 
-/* Additional Styling */
-a {
-    text-decoration: none;
-    color: black;
-}
-
-a:hover {
-    color: blue;
-}
-
-/* Additional Section Styling */
+/* Section Container */
 .section {
     text-align: left;
     margin-left: 50px;
+    background-color: #faf0e6; /* Light beige background */
+    padding: 15px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+}
+
+/* Header Text */
+h2.name, h3.head {
+    margin: 0;
+    padding: 0;
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* More playful font */
+    font-size: 28px;
+    line-height: 1.4;
+}
+
+/* Footer */
+.footer h2 {
+    font-size: 20px;
+    color: #555;
 }
