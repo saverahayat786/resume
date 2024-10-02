@@ -1,0 +1,72 @@
+/* Combining CSS Selectors */
+.content, .footer, .header {
+    margin: 20px;
+    text-align: center;
+}
+
+/* CSS Positioning */
+.profile_img {
+    position: relative;
+    left: 50px;
+    top: 10px;
+    width: 150px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+/* CSS Display */
+.name {
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 24px;
+    color: darkblue;
+}
+
+/* Float */
+h3.head {
+    float: left;
+    color: teal;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    body {
+        background-color: lightgray;
+    }
+
+    .content, .footer {
+        text-align: left;
+    }
+}
+
+@media (min-width: 769px) {
+    body {
+        background-color: white;
+    }
+}
+
+/* Flexbox */
+.header, .footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: beige;
+}
+
+/* Grid */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+
+/* Additional styling */
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: blue;
+}
