@@ -1,57 +1,139 @@
-/* General Styles */
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 20px;
+/* Combining CSS Selectors */
+body, .content, .footer, .header {
+    margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f3e4; /* Soft background color for a cute look */
 }
 
-h1.name {
+.content, .footer, .header {
+    margin: 20px;
     text-align: center;
-    color: #333;
-    margin-bottom: 20px;
+    padding: 10px;
 }
 
-.contact {
-    text-align: center;
-    font-style: italic;
-}
-
-/* Section Headers */
-.section-header {
-    margin-top: 30px;
-    color: #4b0082; /* Indigo color for section headers */
-    border-bottom: 2px solid #ccc;
-    padding-bottom: 5px;
-}
-
-/* Profile Image */
+/* CSS Positioning */
 .profile_img {
-    display: block;
-    margin: 0 auto;
-    width: 150px; /* Set your desired width */
+    position: relative;
+    left: 50px;
+    top: 10px;
+    width: 150px; /* Adjusted width */
     height: auto; /* Maintain aspect ratio */
-    border-radius: 50%; /* Makes image circular */
+    border-radius: 50%;
+    border: 3px solid #ffe4e1; /* Soft border */
 }
 
-/* Lists */
+/* CSS Display */
+.name {
+    display: block;
+    margin-top: 20px;
+    font-size: 32px; /* Larger font for name */
+    font-weight: bold;
+    color: #4169e1; /* Royal Blue */
+}
+
+/* Section Headings */
+.head {
+    float: none; /* Removed float */
+    text-align: left;
+    color: #006400; /* Dark Green */
+    font-size: 24px; /* Increase font size */
+    margin-top: 30px; /* Separate sections */
+    border-bottom: 2px solid #d3d3d3; /* Underline */
+    padding-bottom: 5px;
+    display: block;
+}
+
+/* List Style */
 ul {
     list-style-type: none; /* Remove bullet points */
-    padding-left: 0; /* Remove left padding */
+    padding: 0;
+    margin: 15px 0; /* Space above and below lists */
 }
 
-ul li {
-    margin-bottom: 10px; /* Space between list items */
+ul li::before {
+    content: "\2022"; /* Add a custom bullet point */
+    color: #ff69b4; /* Light pink bullet */
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
 }
 
-/* Additional Styling */
+/* Paragraph styling */
+p, a {
+    font-size: 18px;
+    line-height: 1.6; /* Increase line spacing */
+    margin-bottom: 10px;
+    color: #333; /* Standard text color */
+}
+
+/* Links */
 a {
     text-decoration: none;
-    color: #0066cc; /* Change link color */
+    color: #333;
 }
 
 a:hover {
-    color: #ff6600; /* Change link color on hover */
+    color: #ff69b4; /* Light pink on hover */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    body {
+        background-color: lightgray;
+    }
+
+    .content, .footer {
+        text-align: left;
+    }
+}
+
+@media (min-width: 769px) {
+    body {
+        background-color: white;
+    }
+}
+
+/* Flexbox */
+.header, .footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #ffe4e1; /* Light pink background */
+    border-radius: 15px;
+}
+
+/* Grid */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+
+/* Section Container */
+.section {
+    text-align: left;
+    margin-left: 50px;
+    background-color: #faf0e6; /* Light beige background */
+    padding: 15px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+}
+
+/* Header Text */
+h2.name, h3.head {
+    margin: 0;
+    padding: 0;
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* More playful font */
+    font-size: 28px;
+    line-height: 1.4;
+}
+
+/* Footer */
+.footer h2 {
+    font-size: 20px;
+    color: #555;
 }
 
